@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Archivo:wght@600;700&display=swap" rel="stylesheet"><style>body{margin:0;background:#0C0B0A}*{box-sizing:border-box}a{color:#E8641C;text-decoration:none}a:hover{color:#F0A830}img{display:block}</style></helmet>
+
+<div style="padding:48px 56px 80px;background:#0C0B0A;font-family:'IBM Plex Sans Thai',sans-serif">
+
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px">
+<div style="font:700 30px/1.2 'Anuphan',sans-serif;color:#F5EFE6">Hungry Bird’s — เมนูลับ</div>
+<div style="font:400 14px/1.5 'IBM Plex Sans Thai',sans-serif;color:#8B8078">Mobile app UI · 390 × flexible · Dark kitchen theme · 13 frames + design system</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:44px;align-items:flex-start">
+
+<!-- ══ 00 DESIGN SYSTEM ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">00 · DESIGN SYSTEM</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;padding:0 0 34px;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="padding:12px 20px 0;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:4px"><div style="font:700 28px/36px 'Anuphan',sans-serif">Design System</div><div style="font:400 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">Hungry Bird’s · v1.0 · 18 ส.ค. 2569</div></div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font:600 18px/26px 'Anuphan',sans-serif">สี</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#141210;border:1px solid #362F29"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">bg #141210</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#1F1C19;border:1px solid #362F29"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">surface</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#2A2521;border:1px solid #362F29"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">surface-2</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#E8641C"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">primary</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#B84C13"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">primary-dim</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#F0A830"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">accent</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#5BA36B"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">success</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#E0A33A"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">warning</div></div>
+        <div style="width:106px;display:flex;flex-direction:column;gap:6px"><div style="height:48px;border-radius:8px;background:#D0523F"></div><div style="font:500 11px/16px ui-monospace,monospace;color:#C4B9AC">danger</div></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="font:600 18px/26px 'Anuphan',sans-serif">Type scale</div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:16px;background:#1F1C19;border-radius:12px;border:1px solid #362F29">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span style="font:700 28px/36px 'Anuphan',sans-serif">เมนูลับ</span><span style="font:500 11px/16px ui-monospace,monospace;color:#8B8078">Display 28/36/700</span></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span style="font:700 22px/30px 'Anuphan',sans-serif">ชื่อสินค้า</span><span style="font:500 11px/16px ui-monospace,monospace;color:#8B8078">H1 22/30/700</span></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span style="font:600 18px/26px 'Anuphan',sans-serif">หัวข้อ section</span><span style="font:500 11px/16px ui-monospace,monospace;color:#8B8078">H2 18/26/600</span></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span style="font:400 15px/24px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">เนื้อความอ่านสบายตา</span><span style="font:500 11px/16px ui-monospace,monospace;color:#8B8078">Body 15/24/400</span></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">Label / caption</span><span style="font:500 11px/16px ui-monospace,monospace;color:#8B8078">Label 13/18/500</span></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿229</span><span style="font:500 11px/16px ui-monospace,monospace;color:#8B8078">Price 20/26/700</span></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="font:600 18px/26px 'Anuphan',sans-serif">Components</div>
+      <div style="height:52px;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff">ปุ่มหลัก C4</div>
+      <div style="height:52px;border-radius:12px;background:transparent;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ปุ่มรอง C5</div>
+      <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">Input field C6</span></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div style="height:36px;padding:0 16px;border-radius:999px;background:#E8641C;display:flex;align-items:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#fff">Chip active</div>
+        <div style="height:36px;padding:0 16px;border-radius:999px;background:#2A2521;border:1px solid #362F29;display:flex;align-items:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">Chip</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div style="height:24px;padding:0 8px;border-radius:6px;background:rgba(224,163,58,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#E0A33A">กำลังจัดส่ง</div>
+        <div style="height:24px;padding:0 8px;border-radius:6px;background:rgba(91,163,107,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#5BA36B">สำเร็จ</div>
+        <div style="height:24px;padding:0 8px;border-radius:6px;background:rgba(208,82,63,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#D0523F">ยกเลิก</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;height:36px;padding:0 6px;border-radius:999px;background:#2A2521;width:fit-content">
+        <div style="width:28px;height:28px;border-radius:999px;background:#141210;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#C4B9AC" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+        <span style="font:700 15px 'Archivo',sans-serif;color:#F5EFE6">2</span>
+        <div style="width:28px;height:28px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 18px/26px 'Anuphan',sans-serif">Section header C14</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ดูทั้งหมด ›</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ 01 LOGIN ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">01 · LOGIN</div></sc-if>
+<div style="width:390px;height:844px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="padding:40px 20px 0;display:flex;flex-direction:column;align-items:center;gap:8px;flex:none">
+    <img src="img/logo.svg" width="96" height="96" alt="Hungry Bird's logo" style="border-radius:999px">
+    <div style="font:700 28px/36px 'Anuphan',sans-serif;margin-top:8px">ยินดีต้อนรับกลับ</div>
+    <div style="font:400 15px/24px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เข้าสู่ระบบเพื่อสั่งเมนูลับ</div>
+  </div>
+  <div style="padding:32px 20px 0;display:flex;flex-direction:column;gap:16px;flex:none">
+    <div style="height:44px;border-radius:999px;background:#2A2521;padding:4px;display:flex;gap:4px">
+      <div style="flex:1;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 14px 'IBM Plex Sans Thai',sans-serif;color:#fff">เข้าสู่ระบบ</div>
+      <div style="flex:1;border-radius:999px;display:flex;align-items:center;justify-content:center;font:500 14px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">สมัครสมาชิก</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">อีเมล / เบอร์โทร</span>
+      <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">somchai@mail.com</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">รหัสผ่าน</span>
+      <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="10.5" width="16" height="10.5" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><span style="flex:1;font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;letter-spacing:.2em">••••••••</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><path d="M2 12s3.8-6 10-6 10 6 10 6-3.8 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.8"/></svg></div>
+    </div>
+    <div style="display:flex;justify-content:flex-end"><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ลืมรหัสผ่าน?</span></div>
+    <div style="height:52px;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff">เข้าสู่ระบบ</div>
+    <div style="display:flex;align-items:center;gap:12px"><div style="flex:1;height:1px;background:#362F29"></div><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">หรือ</span><div style="flex:1;height:1px;background:#362F29"></div></div>
+    <div style="display:flex;gap:12px">
+      <div style="flex:1;height:52px;border-radius:12px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">LINE</div>
+      <div style="flex:1;height:52px;border-radius:12px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">Google</div>
+      <div style="flex:1;height:52px;border-radius:12px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">Facebook</div>
+    </div>
+    <div style="text-align:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078;margin-top:4px">เข้าใช้งานแบบผู้เยี่ยมชม</div>
+  </div>
+  <div style="flex:1"></div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 01b REGISTER ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">01b · REGISTER</div></sc-if>
+<div style="width:390px;height:844px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="padding:28px 20px 0;display:flex;flex-direction:column;align-items:center;gap:6px;flex:none">
+    <img src="img/logo.svg" width="72" height="72" alt="Hungry Bird's logo" style="border-radius:999px">
+    <div style="font:700 28px/36px 'Anuphan',sans-serif;margin-top:6px">สร้างบัญชีใหม่</div>
+    <div style="font:400 15px/24px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">สมัครฟรี รับส่วนลดครั้งแรก ฿50</div>
+  </div>
+  <div style="padding:24px 20px 0;display:flex;flex-direction:column;gap:14px;flex:none">
+    <div style="height:44px;border-radius:999px;background:#2A2521;padding:4px;display:flex;gap:4px">
+      <div style="flex:1;border-radius:999px;display:flex;align-items:center;justify-content:center;font:500 14px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เข้าสู่ระบบ</div>
+      <div style="flex:1;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 14px 'IBM Plex Sans Thai',sans-serif;color:#fff">สมัครสมาชิก</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ชื่อ-นามสกุล</span>
+      <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">สมชาย ใจดี</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">อีเมล / เบอร์โทร</span>
+      <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">อีเมลหรือเบอร์โทร</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">รหัสผ่าน</span>
+      <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="10.5" width="16" height="10.5" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><span style="flex:1;font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;letter-spacing:.2em">••••••••</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><path d="M2 12s3.8-6 10-6 10 6 10 6-3.8 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.8"/></svg></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ยืนยันรหัสผ่าน</span>
+      <div style="height:52px;border-radius:12px;background:#2A2521;border:1px solid #5BA36B;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="10.5" width="16" height="10.5" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><span style="flex:1;font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;letter-spacing:.2em">••••••••</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5BA36B" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4.5 4.5L19 7"/></svg></div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding-top:2px">
+      <div style="width:20px;height:20px;border-radius:6px;background:#E8641C;display:flex;align-items:center;justify-content:center;flex:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13l4.5 4.5L19 7"/></svg></div>
+      <span style="font:400 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ฉันยอมรับ <span style="color:#E8641C;font-weight:500">เงื่อนไขการใช้บริการ</span> และ <span style="color:#E8641C;font-weight:500">นโยบายความเป็นส่วนตัว</span></span>
+    </div>
+    <div style="height:52px;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff;margin-top:2px">สมัครสมาชิก</div>
+  </div>
+  <div style="flex:1"></div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 02 HOME ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">02 · HOME</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex:none">
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <span style="font:500 11px/16px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ส่งไปที่</span>
+      <span style="display:flex;align-items:center;gap:6px;font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">อาคารจตุรัส ชั้น 12 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span>
+    </div>
+    <div style="position:relative;width:40px;height:40px;border-radius:999px;background:#1F1C19;display:flex;align-items:center;justify-content:center">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="1.8" stroke-linecap="round"><path d="M6 10a6 6 0 0 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 14 6 10z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>
+      <div style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:999px;background:#D0523F;border:2px solid #141210"></div>
+    </div>
+  </div>
+  <div style="padding:8px 20px 0;flex:none"><div style="height:48px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ค้นหาเมนูลับ...</span></div></div>
+  <div style="padding:20px 20px 0;flex:none">
+    <div style="position:relative;width:350px;height:180px;border-radius:16px;overflow:hidden">
+      <img src="img/ph-hero.svg" width="350" height="180" alt="hero" style="width:350px;height:180px;object-fit:cover">
+      <div style="position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(to top,rgba(10,9,8,.92),rgba(10,9,8,0))"></div>
+      <div style="position:absolute;left:20px;bottom:18px;display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+        <span style="font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#F0A830;letter-spacing:.06em">SECRET OF THE WEEK</span>
+        <span style="font:700 22px/30px 'Anuphan',sans-serif;color:#F5EFE6">เมนูลับประจำสัปดาห์</span>
+        <span style="height:32px;padding:0 16px;border-radius:999px;background:#E8641C;display:flex;align-items:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#fff">ดูเลย</span>
+      </div>
+    </div>
+  </div>
+  <div style="padding:24px 20px 0;display:flex;flex-direction:column;gap:14px;flex:none">
+    <div style="font:600 18px/26px 'Anuphan',sans-serif">หมวดหมู่</div>
+    <div style="display:flex;gap:18px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:64px"><img src="img/ph-cat.svg" width="64" height="64" alt="เบอร์เกอร์" style="border-radius:999px;border:1px solid #362F29"><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">เบอร์เกอร์</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:64px"><img src="img/ph-cat.svg" width="64" height="64" alt="ทาโก้" style="border-radius:999px;border:1px solid #362F29"><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ทาโก้</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:64px"><img src="img/ph-cat.svg" width="64" height="64" alt="ของทานเล่น" style="border-radius:999px;border:1px solid #362F29"><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ทานเล่น</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:64px"><img src="img/ph-cat.svg" width="64" height="64" alt="เครื่องดื่ม" style="border-radius:999px;border:1px solid #362F29"><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">เครื่องดื่ม</span></div>
+    </div>
+  </div>
+  <div style="padding:24px 0 0 20px;display:flex;flex-direction:column;gap:14px;flex:none">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding-right:20px"><span style="font:600 18px/26px 'Anuphan',sans-serif">ขายดีประจำร้าน</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ดูทั้งหมด ›</span></div>
+    <div style="display:flex;gap:14px;overflow:hidden">
+      <div style="width:165px;flex:none;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column">
+        <div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div><div style="position:absolute;left:8px;top:8px;height:24px;padding:0 8px;border-radius:6px;background:rgba(20,18,16,.8);display:flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F0A830"><path d="M12 2l3 6.5 7 .8-5 4.8 1.3 7L12 17.8 5.7 21.1 7 14.1 2 9.3l7-.8z"/></svg><span style="font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">4.8</span></div></div>
+        <div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿229</span></div>
+      </div>
+      <div style="width:165px;flex:none;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column">
+        <div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="ทาโก้เนื้อสไปซี่" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div><div style="position:absolute;left:8px;top:8px;height:24px;padding:0 8px;border-radius:6px;background:rgba(20,18,16,.8);display:flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F0A830"><path d="M12 2l3 6.5 7 .8-5 4.8 1.3 7L12 17.8 5.7 21.1 7 14.1 2 9.3l7-.8z"/></svg><span style="font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">4.7</span></div></div>
+        <div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ทาโก้เนื้อสไปซี่ 3 ชิ้น</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿169</span></div>
+      </div>
+      <div style="width:165px;flex:none;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column">
+        <div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="ทรัฟเฟิลเฟรนช์ฟรายส์" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"></div>
+        <div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ทรัฟเฟิลเฟรนช์ฟรายส์</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿119</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="padding:24px 20px 0;flex:none">
+    <div style="width:350px;height:110px;border-radius:16px;background:#1F1C19;border:1px solid #362F29;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:6px">
+      <span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">ลด 20% เมื่อสั่งครบ ฿300</span>
+      <span style="font:400 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ใช้โค้ด HUNGRY20 · ถึง 31 ส.ค. นี้</span>
+    </div>
+  </div>
+  <div style="padding:24px 20px 0;display:flex;flex-direction:column;gap:14px;flex:none">
+    <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 18px/26px 'Anuphan',sans-serif">เมนูทั้งหมด</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ดูทั้งหมด ›</span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px">
+      <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์ไก่กรอบพริกเผา" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์ไก่กรอบพริกเผา</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿179</span></div></div>
+      <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์หมูสับซอสดำ" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์หมูสับซอสดำ</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿159</span></div></div>
+      <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="ปีกไก่ทอดน้ำผึ้ง" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">ปีกไก่ทอดน้ำผึ้ง 6 ชิ้น</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿139</span></div></div>
+      <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="โคล่าปั่นเชอร์รี" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">โคล่าปั่นเชอร์รี</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿69</span></div></div>
+    </div>
+  </div>
+  <div style="height:32px;flex:none"></div>
+  <div style="height:64px;border-top:1px solid #362F29;background:#1F1C19;display:flex;align-items:center;flex:none">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.9" stroke-linecap="round"><path d="M4 11l8-6.5 8 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">หน้าหลัก</span><div style="width:4px;height:4px;border-radius:999px;background:#E8641C"></div></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เมนู</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><span style="position:relative;display:flex"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16l-1.4 11.2A2 2 0 0 1 16.6 20H7.4a2 2 0 0 1-2-1.8z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span style="position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#D0523F;display:flex;align-items:center;justify-content:center;font:700 10px 'Archivo',sans-serif;color:#fff">{{ cartCount }}</span></span><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ตะกร้า</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">คำสั่งซื้อ</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ฉัน</span></div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 03 CATEGORY ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">03 · CATEGORY</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex:none">
+    <div style="width:40px;height:40px;border-radius:999px;background:#1F1C19;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M14 6l-6 6 6 6"/></svg></div>
+    <span style="font:600 18px 'Anuphan',sans-serif">เบอร์เกอร์</span>
+    <div style="width:40px;height:40px;border-radius:999px;background:#1F1C19;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg></div>
+  </div>
+  <div style="padding:8px 20px 0;display:flex;gap:8px;overflow:hidden;flex:none">
+    <div style="height:36px;padding:0 16px;border-radius:999px;background:#E8641C;display:flex;align-items:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#fff;flex:none">ทั้งหมด</div>
+    <div style="height:36px;padding:0 16px;border-radius:999px;background:#2A2521;border:1px solid #362F29;display:flex;align-items:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;flex:none">หมู</div>
+    <div style="height:36px;padding:0 16px;border-radius:999px;background:#2A2521;border:1px solid #362F29;display:flex;align-items:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;flex:none">ไก่</div>
+    <div style="height:36px;padding:0 16px;border-radius:999px;background:#2A2521;border:1px solid #362F29;display:flex;align-items:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;flex:none">เนื้อ</div>
+    <div style="height:36px;padding:0 16px;border-radius:999px;background:#2A2521;border:1px solid #362F29;display:flex;align-items:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;flex:none">ดับเบิ้ล</div>
+  </div>
+  <div style="padding:16px 20px 0;display:flex;align-items:center;justify-content:space-between;flex:none">
+    <span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">พบ 12 เมนู</span>
+    <span style="display:flex;align-items:center;gap:12px"><span style="display:flex;align-items:center;gap:4px;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ยอดนิยม <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.9" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg></span>
+  </div>
+  <div style="padding:16px 20px 0;display:flex;flex-wrap:wrap;gap:20px;flex:none">
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;left:8px;top:8px;height:24px;padding:0 8px;border-radius:6px;background:rgba(232,100,28,.9);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#fff">ขายดี</div><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿229</span></div></div>
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์ไก่กรอบพริกเผา" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์ไก่กรอบพริกเผา</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿179</span></div></div>
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์หมูสับซอสดำ" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์หมูสับซอสดำ</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿159</span></div></div>
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์ปลาทอดซอสทาร์ทาร์" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์ปลาซอสทาร์ทาร์</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿149</span></div></div>
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์เห็ดทรัฟเฟิล" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;left:8px;top:8px;height:24px;padding:0 8px;border-radius:6px;background:rgba(240,168,48,.16);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#F0A830">ใหม่</div><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์เห็ดทรัฟเฟิล</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿199</span></div></div>
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์เบคอนบาร์บีคิว" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์เบคอนบาร์บีคิว</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿209</span></div></div>
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์ไก่ซอสเกาหลี" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์ไก่ซอสเกาหลี</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿185</span></div></div>
+    <div style="width:165px;background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column"><div style="position:relative"><img src="img/ph-food.svg" width="165" height="130" alt="เบอร์เกอร์วากิวลาวา" style="width:163px;height:130px;object-fit:cover;border-radius:11px 11px 0 0"><div style="position:absolute;right:8px;bottom:-16px;width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;border:2px solid #1F1C19"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div><div style="padding:16px 12px 12px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px/18px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์วากิวลาวาชีส</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿289</span></div></div>
+  </div>
+  <div style="height:32px;flex:none"></div>
+  <div style="height:64px;border-top:1px solid #362F29;background:#1F1C19;display:flex;align-items:center;flex:none">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 11l8-6.5 8 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">หน้าหลัก</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">เมนู</span><div style="width:4px;height:4px;border-radius:999px;background:#E8641C"></div></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><span style="position:relative;display:flex"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16l-1.4 11.2A2 2 0 0 1 16.6 20H7.4a2 2 0 0 1-2-1.8z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span style="position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#D0523F;display:flex;align-items:center;justify-content:center;font:700 10px 'Archivo',sans-serif;color:#fff">{{ cartCount }}</span></span><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ตะกร้า</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">คำสั่งซื้อ</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ฉัน</span></div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 04 PRODUCT DETAIL ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">04 · PRODUCT DETAIL</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column;position:relative">
+  <div style="position:relative;height:300px;flex:none">
+    <img src="img/ph-food.svg" width="390" height="300" alt="เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส" style="width:390px;height:300px;object-fit:cover">
+    <div style="position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(to top,rgba(20,18,16,1),rgba(20,18,16,0))"></div>
+    <div style="position:absolute;left:20px;top:56px;width:40px;height:40px;border-radius:999px;background:rgba(20,18,16,.6);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M14 6l-6 6 6 6"/></svg></div>
+    <div style="position:absolute;right:20px;top:56px;display:flex;gap:8px">
+      <div style="width:40px;height:40px;border-radius:999px;background:rgba(20,18,16,.6);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="1.9" stroke-linecap="round"><path d="M12 20s-8-4.9-8-10a4.6 4.6 0 0 1 8-2.6A4.6 4.6 0 0 1 20 10c0 5.1-8 10-8 10z"/></svg></div>
+      <div style="width:40px;height:40px;border-radius:999px;background:rgba(20,18,16,.6);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="1.9" stroke-linecap="round"><circle cx="17.5" cy="6" r="2.6"/><circle cx="6.5" cy="12" r="2.6"/><circle cx="17.5" cy="18" r="2.6"/><path d="M9 10.8l6-3.6M9 13.2l6 3.6"/></svg></div>
+    </div>
+  </div>
+  <div style="margin-top:-20px;background:#141210;border-radius:24px 24px 0 0;padding:24px 20px 0;display:flex;flex-direction:column;gap:14px;position:relative;flex:none">
+    <div style="font:700 22px/30px 'Anuphan',sans-serif">เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="display:flex;align-items:center;gap:5px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F0A830"><path d="M12 2l3 6.5 7 .8-5 4.8 1.3 7L12 17.8 5.7 21.1 7 14.1 2 9.3l7-.8z"/></svg><span style="font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">4.8</span><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">(127 รีวิว)</span></span>
+      <span style="width:1px;height:14px;background:#362F29"></span>
+      <span style="height:24px;padding:0 8px;border-radius:6px;background:rgba(232,100,28,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ขายดีอันดับ 1</span>
+    </div>
+    <div style="font:700 28px/36px 'Anuphan',sans-serif;color:#F0A830">฿229</div>
+    <div style="font:400 15px/24px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">เนื้อบดสองชั้นย่างบนเตาถ่านจนหอมควัน ราดชีสเชดดาร์ละลาย สอดไส้หอมใหญ่คาราเมลไลซ์ และซอสลับสูตรเฉพาะของร้าน เสิร์ฟในขนมปังบริโอชด้านนอกกรอบ</div>
+    <div style="height:1px;background:#362F29;margin:6px 0"></div>
+    <div style="display:flex;align-items:center;gap:10px"><span style="font:600 18px/26px 'Anuphan',sans-serif">เลือกระดับความสุก</span><span style="height:24px;padding:0 8px;border-radius:6px;background:rgba(208,82,63,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#D0523F">จำเป็น</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #E8641C;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:6px solid #E8641C;background:#141210;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">Medium</span></div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:2px solid #4A4038;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">Medium Well</span></div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:2px solid #4A4038;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">Well Done</span></div>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:6px"><span style="font:600 18px/26px 'Anuphan',sans-serif">เพิ่มท็อปปิ้ง</span><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เลือกได้หลายอย่าง</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #E8641C;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:6px;background:#E8641C;display:flex;align-items:center;justify-content:center;flex:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13l4.5 4.5L19 7"/></svg></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ชีสเพิ่ม 1 แผ่น</span><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#F0A830">+฿20</span></div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #4A4038;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">เบคอนกรอบ</span><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">+฿30</span></div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #4A4038;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ไข่ดาว</span><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">+฿15</span></div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #4A4038;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">หอมทอด</span><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">+฿10</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
+      <span style="font:600 18px/26px 'Anuphan',sans-serif">หมายเหตุถึงร้าน</span>
+      <div style="height:80px;border-radius:12px;background:#2A2521;padding:14px 16px;font:400 15px/22px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เช่น ไม่ใส่หอมใหญ่ / ขอซอสแยก</div>
+    </div>
+    <div style="height:100px;flex:none"></div>
+  </div>
+  <div style="height:84px;background:#1F1C19;border-top:1px solid #362F29;padding:0 20px;display:flex;align-items:center;gap:14px;flex:none">
+    <div style="display:flex;align-items:center;gap:12px;height:52px;padding:0 8px;border-radius:12px;background:#2A2521;flex:none">
+      <div style="width:32px;height:32px;border-radius:999px;background:#141210;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#C4B9AC" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+      <span style="font:700 17px 'Archivo',sans-serif;color:#F5EFE6">1</span>
+      <div style="width:32px;height:32px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+    </div>
+    <div style="flex:1;height:52px;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff">เพิ่มลงตะกร้า ฿249</div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 05 CART ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">05 · CART</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex:none">
+    <div style="width:40px;height:40px;border-radius:999px;background:#1F1C19;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M14 6l-6 6 6 6"/></svg></div>
+    <span style="font:600 18px 'Anuphan',sans-serif">ตะกร้าของฉัน</span>
+    <span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#D0523F">ลบทั้งหมด</span>
+  </div>
+  <div style="padding:8px 20px 0;display:flex;flex-direction:column;gap:12px;flex:none">
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:12px;display:flex;gap:12px;align-items:center">
+      <img src="img/ph-food.svg" width="72" height="72" alt="เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส" style="width:72px;height:72px;object-fit:cover;border-radius:8px;flex:none">
+      <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+        <span style="font:500 15px/22px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์ดับเบิ้ลเนื้อย่างชีส</span>
+        <span style="font:400 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">Medium · ชีสเพิ่ม</span>
+        <span style="font:700 17px 'Anuphan',sans-serif;color:#F0A830">฿249</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:none">
+        <div style="width:28px;height:28px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+        <span style="font:700 15px 'Archivo',sans-serif">1</span>
+        <div style="width:28px;height:28px;border-radius:999px;background:#2A2521;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#C4B9AC" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+      </div>
+    </div>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:12px;display:flex;gap:12px;align-items:center">
+      <img src="img/ph-food.svg" width="72" height="72" alt="ทาโก้เนื้อสไปซี่" style="width:72px;height:72px;object-fit:cover;border-radius:8px;flex:none">
+      <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+        <span style="font:500 15px/22px 'IBM Plex Sans Thai',sans-serif">ทาโก้เนื้อสไปซี่ 3 ชิ้น</span>
+        <span style="font:400 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เผ็ดกลาง</span>
+        <span style="font:700 17px 'Anuphan',sans-serif;color:#F0A830">฿169</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:none">
+        <div style="width:28px;height:28px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+        <span style="font:700 15px 'Archivo',sans-serif">1</span>
+        <div style="width:28px;height:28px;border-radius:999px;background:#2A2521;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#C4B9AC" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+      </div>
+    </div>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:12px;display:flex;gap:12px;align-items:center">
+      <img src="img/ph-food.svg" width="72" height="72" alt="โคล่าปั่นเชอร์รี" style="width:72px;height:72px;object-fit:cover;border-radius:8px;flex:none">
+      <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+        <span style="font:500 15px/22px 'IBM Plex Sans Thai',sans-serif">โคล่าปั่นเชอร์รี</span>
+        <span style="font:400 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">แก้วใหญ่ · หวานน้อย</span>
+        <span style="font:700 17px 'Anuphan',sans-serif;color:#F0A830">฿79</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:none">
+        <div style="width:28px;height:28px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+        <span style="font:700 15px 'Archivo',sans-serif">1</span>
+        <div style="width:28px;height:28px;border-radius:999px;background:#2A2521;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#C4B9AC" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+      </div>
+    </div>
+  </div>
+  <div style="padding:20px 20px 0;flex:none">
+    <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;gap:10px;padding:0 6px 0 16px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0A830" stroke-width="1.8" stroke-linecap="round"><path d="M3 8.5A1.5 1.5 0 0 0 4.5 7h15A1.5 1.5 0 0 0 21 8.5v2a2 2 0 0 0 0 3v2A1.5 1.5 0 0 0 19.5 17h-15A1.5 1.5 0 0 0 3 15.5v-2a2 2 0 0 0 0-3z"/><path d="M14 10.5l-4 3"/></svg>
+      <span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ใส่โค้ดส่วนลด</span>
+      <div style="height:40px;padding:0 18px;border-radius:8px;background:#E8641C;display:flex;align-items:center;font:600 14px 'IBM Plex Sans Thai',sans-serif;color:#fff">ใช้โค้ด</div>
+    </div>
+  </div>
+  <div style="padding:20px 20px 0;flex:none">
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between"><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ราคารวม</span><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">฿497</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ค่าจัดส่ง</span><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">฿29</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ส่วนลด</span><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#5BA36B">-฿50</span></div>
+      <div style="height:1px;background:#362F29"></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ยอดชำระ</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿476</span></div>
+    </div>
+  </div>
+  <div style="height:24px;flex:none"></div>
+  <div style="height:84px;background:#1F1C19;border-top:1px solid #362F29;padding:0 20px;display:flex;align-items:center;flex:none">
+    <div style="flex:1;height:52px;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff">ดำเนินการสั่งซื้อ (3 รายการ)</div>
+  </div>
+  <div style="height:64px;border-top:1px solid #362F29;background:#1F1C19;display:flex;align-items:center;flex:none">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 11l8-6.5 8 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">หน้าหลัก</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เมนู</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><span style="position:relative;display:flex"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16l-1.4 11.2A2 2 0 0 1 16.6 20H7.4a2 2 0 0 1-2-1.8z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span style="position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#D0523F;display:flex;align-items:center;justify-content:center;font:700 10px 'Archivo',sans-serif;color:#fff">{{ cartCount }}</span></span><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ตะกร้า</span><div style="width:4px;height:4px;border-radius:999px;background:#E8641C"></div></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">คำสั่งซื้อ</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ฉัน</span></div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 05b EMPTY CART ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">05b · CART EMPTY</div></sc-if>
+<div style="width:390px;height:844px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex:none">
+    <div style="width:40px;height:40px;border-radius:999px;background:#1F1C19;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M14 6l-6 6 6 6"/></svg></div>
+    <span style="font:600 18px 'Anuphan',sans-serif">ตะกร้าของฉัน</span>
+    <span style="width:40px"></span>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:0 40px">
+    <img src="img/ph-empty.svg" width="180" height="140" alt="ตะกร้าว่าง" style="border-radius:12px">
+    <div style="font:700 22px/30px 'Anuphan',sans-serif;text-align:center">ตะกร้ายังว่างอยู่</div>
+    <div style="font:400 15px/24px 'IBM Plex Sans Thai',sans-serif;color:#8B8078;text-align:center">เมนูลับรอคุณอยู่ · เลือกเบอร์เกอร์จานแรกได้เลย</div>
+    <div style="height:52px;width:100%;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff;margin-top:8px">เลือกเมนู</div>
+  </div>
+  <div style="height:64px;border-top:1px solid #362F29;background:#1F1C19;display:flex;align-items:center;flex:none">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 11l8-6.5 8 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">หน้าหลัก</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เมนู</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16l-1.4 11.2A2 2 0 0 1 16.6 20H7.4a2 2 0 0 1-2-1.8z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ตะกร้า</span><div style="width:4px;height:4px;border-radius:999px;background:#E8641C"></div></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">คำสั่งซื้อ</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ฉัน</span></div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 06 CHECKOUT ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">06 · CHECKOUT</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="height:56px;padding:0 20px;display:flex;align-items:center;gap:12px;flex:none">
+    <div style="width:40px;height:40px;border-radius:999px;background:#1F1C19;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M14 6l-6 6 6 6"/></svg></div>
+    <span style="font:600 18px 'Anuphan',sans-serif">ชำระเงิน</span>
+  </div>
+  <div style="padding:8px 20px 0;display:flex;align-items:center;gap:8px;flex:none">
+    <span style="display:flex;align-items:center;gap:8px"><span style="width:24px;height:24px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:700 12px 'Archivo',sans-serif;color:#fff">1</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ตะกร้า</span></span>
+    <span style="flex:1;height:2px;background:#E8641C"></span>
+    <span style="display:flex;align-items:center;gap:8px"><span style="width:24px;height:24px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:700 12px 'Archivo',sans-serif;color:#fff">2</span><span style="font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ชำระเงิน</span></span>
+    <span style="flex:1;height:2px;background:#362F29"></span>
+    <span style="display:flex;align-items:center;gap:8px"><span style="width:24px;height:24px;border-radius:999px;background:#2A2521;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:700 12px 'Archivo',sans-serif;color:#8B8078">3</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">สำเร็จ</span></span>
+  </div>
+  <div style="padding:24px 20px 0;display:flex;flex-direction:column;gap:16px;flex:none">
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;gap:12px;align-items:flex-start">
+      <span style="width:36px;height:36px;border-radius:999px;background:rgba(232,100,28,.15);display:flex;align-items:center;justify-content:center;flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s6.5-6.2 6.5-11a6.5 6.5 0 0 0-13 0C5.5 14.8 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+      <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+        <span style="font:600 15px 'IBM Plex Sans Thai',sans-serif">สมชาย ใจดี · 081-234-5678</span>
+        <span style="font:400 13px/18px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">อาคารจตุรัส ชั้น 12 ห้อง 1204<br>ถนนพระราม 4 คลองเตย กรุงเทพฯ 10110</span>
+      </div>
+      <span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#E8641C;flex:none">แก้ไข</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 18px/26px 'Anuphan',sans-serif">เวลาจัดส่ง</span>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #E8641C;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:6px solid #E8641C;background:#141210;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif">ส่งทันที</span><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">30-40 นาที</span></div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:2px solid #4A4038;flex:none"></span><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">กำหนดเวลาเอง</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 18px/26px 'Anuphan',sans-serif">วิธีชำระเงิน</span>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:2px solid #4A4038;flex:none"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><path d="M14 14h2.5v2.5H14zM18 18h2.5v2.5H18z"/></svg><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">พร้อมเพย์ / QR Code</span></div>
+      <div style="border-radius:12px;background:#1F1C19;border:1px solid #E8641C;padding:16px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:20px;height:20px;border-radius:999px;border:6px solid #E8641C;background:#141210;flex:none"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19"/></svg><span style="flex:1;font:600 15px 'IBM Plex Sans Thai',sans-serif">บัตรเครดิต-เดบิต</span></div>
+        <div style="height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;padding:0 16px;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6;letter-spacing:.06em">4842  ••••  ••••  1039</div>
+        <div style="display:flex;gap:12px">
+          <div style="flex:1;height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;padding:0 16px;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">MM / YY</div>
+          <div style="flex:1;height:52px;border-radius:12px;background:#2A2521;display:flex;align-items:center;padding:0 16px;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">CVV</div>
+        </div>
+      </div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:2px solid #4A4038;flex:none"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 9.5L12 4l8.5 5.5M5 9.5V19h14V9.5M3 19h18"/></svg><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">โอนผ่านธนาคาร</span></div>
+      <div style="height:52px;border-radius:12px;background:#1F1C19;border:1px solid #362F29;display:flex;align-items:center;gap:12px;padding:0 16px"><span style="width:20px;height:20px;border-radius:999px;border:2px solid #4A4038;flex:none"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6.5" width="19" height="11" rx="2.5"/><circle cx="12" cy="12" r="2.6"/></svg><span style="flex:1;font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">เก็บเงินปลายทาง</span></div>
+    </div>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;justify-content:space-between"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ราคารวม 3 รายการ</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif">฿497</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ค่าจัดส่ง</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif">฿29</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ส่วนลด HUNGRY20</span><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#5BA36B">-฿50</span></div>
+      <div style="height:1px;background:#362F29"></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif">ยอดชำระ</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿476</span></div>
+    </div>
+  </div>
+  <div style="height:24px;flex:none"></div>
+  <div style="height:84px;background:#1F1C19;border-top:1px solid #362F29;padding:0 20px;display:flex;align-items:center;flex:none">
+    <div style="flex:1;height:52px;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff">ยืนยันการสั่งซื้อ · ฿476</div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 07 ORDER SUCCESS ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">07 · ORDER SUCCESS</div></sc-if>
+<div style="width:390px;height:844px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="padding:60px 20px 0;display:flex;flex-direction:column;align-items:center;gap:12px;flex:none">
+    <div style="width:96px;height:96px;border-radius:999px;background:rgba(91,163,107,.14);display:flex;align-items:center;justify-content:center">
+      <div style="width:72px;height:72px;border-radius:999px;background:#5BA36B;display:flex;align-items:center;justify-content:center"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M5 13l4.5 4.5L19 7"/></svg></div>
+    </div>
+    <div style="font:700 28px/36px 'Anuphan',sans-serif;margin-top:8px">สั่งซื้อสำเร็จ!</div>
+    <div style="font:400 15px/24px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC;text-align:center">ร้านกำลังเตรียมเมนูลับของคุณ</div>
+  </div>
+  <div style="padding:32px 20px 0;display:flex;flex-direction:column;gap:16px;flex:none">
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">หมายเลขคำสั่งซื้อ</span><span style="font:600 14px 'Archivo',sans-serif;color:#F5EFE6">#HB-20260818-047</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เวลาที่สั่ง</span><span style="font:500 14px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">18 ส.ค. 2569 · 18:42</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">คาดว่าจะถึง</span><span style="font:700 16px 'Anuphan',sans-serif;color:#F0A830">19:15 - 19:25</span></div>
+      <div style="height:1px;background:#362F29"></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">ยอดชำระ</span><span style="font:700 20px/26px 'Anuphan',sans-serif;color:#F0A830">฿476</span></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;padding:0 4px">
+      <span style="display:flex">
+        <img src="img/ph-food.svg" width="40" height="40" alt="รายการที่ 1" style="width:40px;height:40px;object-fit:cover;border-radius:8px;border:2px solid #141210">
+        <img src="img/ph-food.svg" width="40" height="40" alt="รายการที่ 2" style="width:40px;height:40px;object-fit:cover;border-radius:8px;border:2px solid #141210;margin-left:-12px">
+        <img src="img/ph-food.svg" width="40" height="40" alt="รายการที่ 3" style="width:40px;height:40px;object-fit:cover;border-radius:8px;border:2px solid #141210;margin-left:-12px">
+      </span>
+      <span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">3 รายการ</span>
+    </div>
+  </div>
+  <div style="flex:1"></div>
+  <div style="padding:0 20px 24px;display:flex;flex-direction:column;gap:12px;flex:none">
+    <div style="height:52px;border-radius:12px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#fff">ติดตามสถานะการจัดส่ง</div>
+    <div style="height:52px;border-radius:12px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">กลับหน้าหลัก</div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 08 ORDER TRACKING ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">08 · ORDER TRACKING</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="position:relative;height:260px;flex:none">
+    <img src="img/ph-map.svg" width="390" height="260" alt="แผนที่ติดตามการจัดส่ง" style="width:390px;height:260px;object-fit:cover">
+    <div style="position:absolute;left:20px;top:56px;width:40px;height:40px;border-radius:999px;background:rgba(20,18,16,.7);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M14 6l-6 6 6 6"/></svg></div>
+  </div>
+  <div style="margin-top:-24px;background:#141210;border-radius:24px 24px 0 0;padding:12px 20px 0;display:flex;flex-direction:column;gap:16px;position:relative;flex:none">
+    <div style="display:flex;justify-content:center"><div style="width:40px;height:4px;border-radius:999px;background:#4A4038"></div></div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+      <span style="height:24px;padding:0 8px;border-radius:6px;background:rgba(224,163,58,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#E0A33A;width:fit-content">กำลังจัดส่ง</span>
+      <span style="font:700 22px/30px 'Anuphan',sans-serif">ถึงใน 12 นาที</span>
+    </div>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:12px;display:flex;align-items:center;gap:12px">
+      <img src="img/ph-avatar.svg" width="48" height="48" alt="ไรเดอร์" style="width:48px;height:48px;border-radius:999px;flex:none">
+      <div style="flex:1;display:flex;flex-direction:column;gap:2px">
+        <span style="font:600 15px 'IBM Plex Sans Thai',sans-serif">อนุชา พรมดี</span>
+        <span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">Honda Wave · 8กก 4471</span>
+        <span style="display:flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F0A830"><path d="M12 2l3 6.5 7 .8-5 4.8 1.3 7L12 17.8 5.7 21.1 7 14.1 2 9.3l7-.8z"/></svg><span style="font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#C4B9AC">4.9</span></span>
+      </div>
+      <div style="display:flex;gap:8px;flex:none">
+        <div style="width:40px;height:40px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"><path d="M5 4.5h4l1.5 4L8 10a10 10 0 0 0 6 6l1.5-2.5 4 1.5v4a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 6 1.5 1.5 0 0 1 5 4.5z"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:999px;background:#2A2521;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="1.9" stroke-linecap="round"><path d="M4 5.5h16v11H10l-4.5 3.5v-3.5H4z"/></svg></div>
+      </div>
+    </div>
+    <div style="height:1px;background:#362F29"></div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;gap:14px">
+        <div style="display:flex;flex-direction:column;align-items:center;width:12px;flex:none"><span style="width:12px;height:12px;border-radius:999px;background:#E8641C"></span><span style="width:2px;flex:1;background:#E8641C;min-height:36px"></span></div>
+        <div style="flex:1;display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:20px"><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6;margin-top:-3px">ยืนยันคำสั่งซื้อ</span><span style="font:500 13px 'Archivo',sans-serif;color:#8B8078">18:42</span></div>
+      </div>
+      <div style="display:flex;gap:14px">
+        <div style="display:flex;flex-direction:column;align-items:center;width:12px;flex:none"><span style="width:12px;height:12px;border-radius:999px;background:#E8641C"></span><span style="width:2px;flex:1;background:#E8641C;min-height:36px"></span></div>
+        <div style="flex:1;display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:20px"><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6;margin-top:-3px">ร้านกำลังเตรียมอาหาร</span><span style="font:500 13px 'Archivo',sans-serif;color:#8B8078">18:45</span></div>
+      </div>
+      <div style="display:flex;gap:14px">
+        <div style="display:flex;flex-direction:column;align-items:center;width:12px;flex:none"><span style="width:16px;height:16px;border-radius:999px;background:#E8641C;border:4px solid rgba(232,100,28,.25);margin:-2px 0 0 -2px"></span><span style="width:2px;flex:1;background:#362F29;min-height:36px"></span></div>
+        <div style="flex:1;display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:20px"><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#F0A830;margin-top:-3px">ไรเดอร์รับอาหารแล้ว</span><span style="font:600 13px 'Archivo',sans-serif;color:#F0A830">19:03</span></div>
+      </div>
+      <div style="display:flex;gap:14px">
+        <div style="display:flex;flex-direction:column;align-items:center;width:12px;flex:none"><span style="width:12px;height:12px;border-radius:999px;background:#2A2521;border:2px solid #362F29"></span></div>
+        <div style="flex:1;display:flex;justify-content:space-between;align-items:flex-start"><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078;margin-top:-3px">จัดส่งสำเร็จ</span><span style="font:500 13px 'Archivo',sans-serif;color:#8B8078">—</span></div>
+      </div>
+    </div>
+    <div style="height:1px;background:#362F29"></div>
+    <div style="text-align:center;font:500 13px 'IBM Plex Sans Thai',sans-serif;color:#E8641C;padding-bottom:24px">ติดต่อฝ่ายบริการลูกค้า</div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 09 ORDER HISTORY ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">09 · ORDER HISTORY</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex:none">
+    <span style="font:600 18px 'Anuphan',sans-serif">ประวัติการสั่งซื้อ</span>
+    <div style="width:40px;height:40px;border-radius:999px;background:#1F1C19;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg></div>
+  </div>
+  <div style="padding:0 20px;display:flex;gap:24px;border-bottom:1px solid #362F29;flex:none">
+    <div style="display:flex;flex-direction:column;gap:8px;padding-bottom:0"><span style="font:600 15px 'IBM Plex Sans Thai',sans-serif;color:#E8641C;padding:8px 0">กำลังดำเนินการ (2)</span><div style="height:2px;background:#E8641C"></div></div>
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078;padding:8px 0">สำเร็จ</span><div style="height:2px;background:transparent"></div></div>
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font:500 15px 'IBM Plex Sans Thai',sans-serif;color:#8B8078;padding:8px 0">ยกเลิก</span><div style="height:2px;background:transparent"></div></div>
+  </div>
+  <div style="padding:16px 20px 0;display:flex;flex-direction:column;gap:12px;flex:none">
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 13px 'Archivo',sans-serif;color:#C4B9AC">#HB-20260818-047</span><span style="height:24px;padding:0 8px;border-radius:6px;background:rgba(224,163,58,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#E0A33A">กำลังจัดส่ง</span></div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="display:flex;flex:none"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19;margin-left:-14px"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19;margin-left:-14px"></span>
+        <span style="flex:1;font:500 15px/22px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์ดับเบิ้ลเนื้อ... +2 รายการ</span>
+      </div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">18 ส.ค. 2569 · 18:42</span><span style="font:700 17px 'Anuphan',sans-serif;color:#F0A830">฿476</span></div>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;height:40px;border-radius:8px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ดูรายละเอียด</div>
+        <div style="flex:1;height:40px;border-radius:8px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#fff">สั่งซ้ำ</div>
+      </div>
+    </div>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 13px 'Archivo',sans-serif;color:#C4B9AC">#HB-20260816-021</span><span style="height:24px;padding:0 8px;border-radius:6px;background:rgba(91,163,107,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#5BA36B">สำเร็จ</span></div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="display:flex;flex:none"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19;margin-left:-14px"></span>
+        <span style="flex:1;font:500 15px/22px 'IBM Plex Sans Thai',sans-serif">ทาโก้เนื้อสไปซี่... +1 รายการ</span>
+      </div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">16 ส.ค. 2569 · 12:10</span><span style="font:700 17px 'Anuphan',sans-serif;color:#F0A830">฿288</span></div>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;height:40px;border-radius:8px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ดูรายละเอียด</div>
+        <div style="flex:1;height:40px;border-radius:8px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#fff">สั่งซ้ำ</div>
+      </div>
+    </div>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 13px 'Archivo',sans-serif;color:#C4B9AC">#HB-20260812-088</span><span style="height:24px;padding:0 8px;border-radius:6px;background:rgba(91,163,107,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#5BA36B">สำเร็จ</span></div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="display:flex;flex:none"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19;margin-left:-14px"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19;margin-left:-14px"></span>
+        <span style="flex:1;font:500 15px/22px 'IBM Plex Sans Thai',sans-serif">เบอร์เกอร์วากิวลาวา... +2 รายการ</span>
+      </div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">12 ส.ค. 2569 · 19:55</span><span style="font:700 17px 'Anuphan',sans-serif;color:#F0A830">฿612</span></div>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;height:40px;border-radius:8px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ดูรายละเอียด</div>
+        <div style="flex:1;height:40px;border-radius:8px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#fff">สั่งซ้ำ</div>
+      </div>
+    </div>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 13px 'Archivo',sans-serif;color:#C4B9AC">#HB-20260809-014</span><span style="height:24px;padding:0 8px;border-radius:6px;background:rgba(208,82,63,.15);display:flex;align-items:center;font:600 11px 'IBM Plex Sans Thai',sans-serif;color:#D0523F">ยกเลิก</span></div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="display:flex;flex:none"><img src="img/ph-food.svg" width="48" height="48" alt="รายการ" style="width:48px;height:48px;object-fit:cover;border-radius:8px;border:2px solid #1F1C19"></span>
+        <span style="flex:1;font:500 15px/22px 'IBM Plex Sans Thai',sans-serif">ปีกไก่ทอดน้ำผึ้ง 6 ชิ้น</span>
+      </div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">9 ส.ค. 2569 · 20:31</span><span style="font:700 17px 'Anuphan',sans-serif;color:#F0A830">฿139</span></div>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;height:40px;border-radius:8px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ดูรายละเอียด</div>
+        <div style="flex:1;height:40px;border-radius:8px;background:#E8641C;display:flex;align-items:center;justify-content:center;font:600 13px 'IBM Plex Sans Thai',sans-serif;color:#fff">สั่งซ้ำ</div>
+      </div>
+    </div>
+  </div>
+  <div style="height:32px;flex:none"></div>
+  <div style="height:64px;border-top:1px solid #362F29;background:#1F1C19;display:flex;align-items:center;flex:none">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 11l8-6.5 8 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">หน้าหลัก</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เมนู</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><span style="position:relative;display:flex"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16l-1.4 11.2A2 2 0 0 1 16.6 20H7.4a2 2 0 0 1-2-1.8z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span style="position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#D0523F;display:flex;align-items:center;justify-content:center;font:700 10px 'Archivo',sans-serif;color:#fff">{{ cartCount }}</span></span><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ตะกร้า</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">คำสั่งซื้อ</span><div style="width:4px;height:4px;border-radius:999px;background:#E8641C"></div></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ฉัน</span></div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+<!-- ══ 10 PROFILE ══ -->
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}"><div style="font:600 11px/1 ui-monospace,Menlo,monospace;color:#8B8078;letter-spacing:.08em">10 · PROFILE</div></sc-if>
+<div style="width:390px;background:#141210;color:#F5EFE6;display:flex;flex-direction:column">
+  <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex:none"><span style="font:600 14px 'IBM Plex Sans Thai',sans-serif">9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="17" height="12" viewBox="0 0 17 12" fill="#F5EFE6"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="1"/><rect x="9" y="3" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="15" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="#F5EFE6"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="21" height="12" rx="3.5" fill="none" stroke="#F5EFE6" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="8" rx="2" fill="#F5EFE6"/><path d="M23.5 4.5v4a2.4 2.4 0 0 0 0-4z" fill="#F5EFE6" opacity=".5"/></svg></span></div>
+  <div style="height:180px;background:linear-gradient(to bottom,#1F1C19,#141210);display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:8px;flex:none">
+    <div style="position:relative;width:80px;height:80px">
+      <img src="img/ph-avatar.svg" width="80" height="80" alt="รูปโปรไฟล์" style="width:80px;height:80px;border-radius:999px;border:2px solid #E8641C">
+      <div style="position:absolute;right:-2px;bottom:-2px;width:26px;height:26px;border-radius:999px;background:#E8641C;border:2px solid #141210;display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3.5 8.5h3l1.5-2h8l1.5 2h3v10h-17z"/><circle cx="12" cy="13" r="3"/></svg></div>
+    </div>
+    <div style="font:700 22px/30px 'Anuphan',sans-serif">สมชาย ใจดี</div>
+    <div style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">somchai@mail.com</div>
+    <div style="height:26px;padding:0 12px;border-radius:999px;background:rgba(240,168,48,.14);display:flex;align-items:center;gap:6px;margin-top:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F0A830"><path d="M12 2l3 6.5 7 .8-5 4.8 1.3 7L12 17.8 5.7 21.1 7 14.1 2 9.3l7-.8z"/></svg><span style="font:600 12px 'IBM Plex Sans Thai',sans-serif;color:#F0A830">Gold Member · 1,240 แต้ม</span></div>
+  </div>
+  <div style="padding:20px;flex:none">
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;padding:16px 0;display:flex;align-items:center">
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font:700 20px 'Anuphan',sans-serif;color:#F5EFE6">24</span><span style="font:400 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">คำสั่งซื้อ</span></div>
+      <div style="width:1px;height:32px;background:#362F29"></div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font:700 20px 'Anuphan',sans-serif;color:#F5EFE6">8</span><span style="font:400 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">รายการโปรด</span></div>
+      <div style="width:1px;height:32px;background:#362F29"></div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font:700 20px 'Anuphan',sans-serif;color:#F0A830">฿12,450</span><span style="font:400 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ยอดสะสม</span></div>
+    </div>
+  </div>
+  <div style="padding:0 20px;display:flex;flex-direction:column;gap:10px;flex:none">
+    <span style="font:600 18px/26px 'Anuphan',sans-serif">บัญชี</span>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column;padding:0 16px">
+      <div style="height:56px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2521"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">แก้ไขข้อมูลส่วนตัว</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="2" stroke-linecap="round"><path d="M10 6l6 6-6 6"/></svg></div>
+      <div style="height:56px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2521"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s6.5-6.2 6.5-11a6.5 6.5 0 0 0-13 0C5.5 14.8 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ที่อยู่จัดส่ง</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="2" stroke-linecap="round"><path d="M10 6l6 6-6 6"/></svg></div>
+      <div style="height:56px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2521"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">วิธีการชำระเงิน</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="2" stroke-linecap="round"><path d="M10 6l6 6-6 6"/></svg></div>
+      <div style="height:56px;display:flex;align-items:center;gap:14px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><path d="M12 20s-8-4.9-8-10a4.6 4.6 0 0 1 8-2.6A4.6 4.6 0 0 1 20 10c0 5.1-8 10-8 10z"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">รายการโปรด</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="2" stroke-linecap="round"><path d="M10 6l6 6-6 6"/></svg></div>
+    </div>
+  </div>
+  <div style="padding:20px 20px 0;display:flex;flex-direction:column;gap:10px;flex:none">
+    <span style="font:600 18px/26px 'Anuphan',sans-serif">ทั่วไป</span>
+    <div style="background:#1F1C19;border-radius:12px;border:1px solid #362F29;display:flex;flex-direction:column;padding:0 16px">
+      <div style="height:56px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2521"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><path d="M6 10a6 6 0 0 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 14 6 10z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">การแจ้งเตือน</span><span style="width:44px;height:26px;border-radius:999px;background:#E8641C;display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><span style="width:20px;height:20px;border-radius:999px;background:#fff"></span></span></div>
+      <div style="height:56px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2521"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 2.5 14.4 0 17M12 3.5c-2.5 2.6-2.5 14.4 0 17"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ภาษา</span><span style="font:400 13px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ไทย</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="2" stroke-linecap="round"><path d="M10 6l6 6-6 6"/></svg></div>
+      <div style="height:56px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #2A2521"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M9.8 9.5a2.3 2.3 0 1 1 3.4 2c-.8.5-1.2 1-1.2 2"/><circle cx="12" cy="17" r=".8" fill="#C4B9AC"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">ช่วยเหลือ</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="2" stroke-linecap="round"><path d="M10 6l6 6-6 6"/></svg></div>
+      <div style="height:56px;display:flex;align-items:center;gap:14px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B9AC" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v6"/><circle cx="12" cy="7.8" r=".8" fill="#C4B9AC"/></svg><span style="flex:1;font:400 15px 'IBM Plex Sans Thai',sans-serif;color:#F5EFE6">เกี่ยวกับเรา</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="2" stroke-linecap="round"><path d="M10 6l6 6-6 6"/></svg></div>
+    </div>
+  </div>
+  <div style="padding:20px;flex:none"><div style="height:52px;border-radius:12px;border:1px solid #362F29;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Sans Thai',sans-serif;color:#D0523F">ออกจากระบบ</div></div>
+  <div style="height:64px;border-top:1px solid #362F29;background:#1F1C19;display:flex;align-items:center;flex:none">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 11l8-6.5 8 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">หน้าหลัก</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">เมนู</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><span style="position:relative;display:flex"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16l-1.4 11.2A2 2 0 0 1 16.6 20H7.4a2 2 0 0 1-2-1.8z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span style="position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#D0523F;display:flex;align-items:center;justify-content:center;font:700 10px 'Archivo',sans-serif;color:#fff">{{ cartCount }}</span></span><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">ตะกร้า</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8078" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#8B8078">คำสั่งซื้อ</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8641C" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-5.6 7.5-5.6S18.1 16 19.5 20"/></svg><span style="font:500 11px 'IBM Plex Sans Thai',sans-serif;color:#E8641C">ฉัน</span><div style="width:4px;height:4px;border-radius:999px;background:#E8641C"></div></div>
+  </div>
+  <div style="height:34px;display:flex;align-items:center;justify-content:center;background:#1F1C19;flex:none"><div style="width:140px;height:5px;border-radius:999px;background:#4A4038"></div></div>
+</div>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showFrameLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;cartCount&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:3,&quot;min&quot;:0,&quot;max&quot;:99,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showLabels: this.props.showFrameLabels ?? true,
+      cartCount: this.props.cartCount ?? 3,
+    };
+  }
+}
+</script>
+</body>
+</html>
